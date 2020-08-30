@@ -20,6 +20,3 @@ def isPalindrome(head):
             return False
 
     return True
-#
-head=ListNode([1,2])
-print(isPalindrome(head))
