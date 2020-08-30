@@ -1,13 +1,13 @@
-#데크 이용
+from collections import deque
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-def isPalindrome(head):
-    from collections import deque
+def isPalindrome(head: ListNode) -> bool:
     q=deque()
 
-    if not head:
+    if not head:        # 빈 연결리스트면 팰린드롬
         return True
 
     node=head
@@ -16,7 +16,8 @@ def isPalindrome(head):
         node=node.next
 
     while len(q)>1:
-        if q.popleft()!=q.pop():
+        if q.popleft() != q.pop():
             return False
 
+    #자료를 다 돌렸는데 안걸리면
     return True
